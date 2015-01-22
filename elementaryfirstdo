@@ -1,0 +1,13 @@
+#!/bin/bash
+ apt-add-repository -y ppa:versable/elementary-update
+ apt-get -y update && sudo apt-get upgrade 
+ apt-get -y install flashplugin-installer nspluginwrapper
+ nspluginwrapper -i /usr/lib/flashplugin-installer/libflashplayer.so
+ nspluginwrapper -v -a -n -i
+ apt-get -y install wingpanel-slim indicatior-synapse cable gazette 
+ apt-get -y install elementary-blue-theme elementary-champagne-theme elementary-colors-theme elementary-dark-theme elementary-harvey-theme elementary-lion-theme elementary-matteblack-theme elementary-milk-theme elementary-plastico-theme elementary-whit-e-theme
+sudo apt-get -y install elementary-elfaenza-icons elementary-emod-icons elementary-enumix-utouch-icons elementary-nitrux-icons elementary-taprevival-icons
+sudo apt-get -y install elementary-thirdparty-icons
+sudo apt-get -y install elementary-plank-themes
+sudo apt-get -y install elementary-wallpaper-collection
+sudo apt-get -y install linux-generic-lts-raring

@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap_grunttheme",
+  "version": "1.0.0",
+  "author": "Horvan",
+  "homepage": "http://horvan.github.io/drubuntu",
+  "engines": {
+    "node": ">= 0.10.25"
+  },
+  "devDependencies": {
+      "grunt-contrib-compass": "v1.0.1",
+      "grunt-contrib-sass": "v0.8.1",
+      "grunt-contrib-watch": "v0.6.1"
+  }
+
+}
