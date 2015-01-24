@@ -5,7 +5,7 @@ if [ `whoami` != root ]; then
 4
 fi
 apt-get install -y plymouth-theme-script #installs script plymouth theme to make changes work.
-dlurl=https://raw.githubusercontent.com/horvan/drubuntu/master/
+dlurl=https://raw.githubusercontent.com/drubuntu/installation/master/files/grub
 grubfilesurl=files/grub/
 $pllogourl=$dlurl$grubfilesurl
 savedir=/opt/.drubuntu/drubuntu/
