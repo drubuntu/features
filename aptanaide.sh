@@ -8,7 +8,7 @@ echo ""
 echo "if Java is not installed you have to accept their terms to be able to use Aptana Studio 3"
 sudo apt-get -y -qq install curl
 sleep 5
-downloadurl=https://raw.githubusercontent.com/horvan/drubuntu/master/features/
+downloadurl=https://raw.githubusercontent.com/drubuntu/features/master/features/
 system=`sudo uname -m`
 apt-get install -y -qq unzip dmidecode >>/dev/null 2&>1
 if [ ! -f  /etc/apt/sources.list.d/webupd8team-java-trusty.list ] ;then
@@ -27,11 +27,11 @@ apt-get install -qq -y tk python-tk git-core libjpeg62 libwebkitgtk-1.0-0
 wget -q "$downloadurl"/archivesources.sh -O archivesources.sh  -O archivesources.sh >>/dev/null 2&>1
 . archivesources.sh
 if [ $system="x86_64" ] ;then
-curl -L -A  "User-Agent: Mozilla/5.0 (Linux; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12" -O $dlx64
+curl -Ls -A  "User-Agent: Mozilla/5.0 (Linux; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12" -O $dlx64
 unzip "$x64" -d /opt
 rm "$x64"
 else
-curl -L -A  "User-Agent: Mozilla/5.0 (Linux; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12" -O $dlx86
+curl -Ls -A  "User-Agent: Mozilla/5.0 (Linux; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12" -O $dlx86
 unzip "$x86" -d /opt
 rm "$x86"
 fi
