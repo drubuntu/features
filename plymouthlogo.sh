@@ -25,21 +25,21 @@ cd /opt/.drubuntu
 
 mkdir "$savedir"
 cd "$savedir"
-wget $dlurl$file1 
-wget $dlurl$file2 
-wget $dlurl$file3 
-wget $dlurl$file4 
-wget $dlurl$file5 
-wget $dlurl$file6 
-wget $dlurl$file7 
-wget $dlurl$file8 
-wget $dllurl$file9 
-wget $dllurl$file10 
+wget -O "$savedir" $dlurl$file1 
+wget -O "$savedir"  $dlurl$file2 
+wget -O "$savedir"  $dlurl$file3 
+wget -O "$savedir"  $dlurl$file4 
+wget -O "$savedir"  $dlurl$file5 
+wget -O "$savedir"  $dlurl$file6 
+wget -O "$savedir"  $dlurl$file7 
+wget -O "$savedir"  $dlurl$file8 
+wget -O "$savedir"  $dlurl$file9 
+wget -O "$savedir"  $dlurl$file10 
 
 mv grub.file grub
 cp -r "$savedir"grub  "$grubdir"				#copy file to /etc/default and replace existing file.
 rm "$savedir"$file1
-cp -r /opt/.drubuntu/drubuntu /lib/plymouth/themes
+cp -r "$savedir" "$plymouththemedir"
 rm -r "$savedir"									#removes savedir for cleanup.
 cd													#the next line sets up drubuntu plymouth theme as default.
 update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/drubuntu/drubuntu.plymouth 100 >/dev/null 
