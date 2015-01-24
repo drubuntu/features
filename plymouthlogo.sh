@@ -7,7 +7,6 @@ fi
 apt-get install -y plymouth-theme-script #installs script plymouth theme to make changes work.
 dlurl=https://raw.githubusercontent.com/drubuntu/installation/master/files/grub
 grubfilesurl=files/grub/
-$pllogourl=$dlurl
 savedir=/opt/.drubuntu/drubuntu/
 plymouththemedir=/lib/plymouth/themes/
 grubdir=/etc/default/
@@ -26,16 +25,16 @@ cd /opt/.drubuntu
 
 mkdir "$savedir"
 cd "$savedir"
-wget $pllogourl$file1 > /dev/null 2>&1	#downloading files
-wget $pllogourl$file2 > /dev/null 2>&1
-wget $pllogourl$file3 > /dev/null 2>&1
-wget $pllogourl$file4 > /dev/null 2>&1
-wget $pllogourl$file5 > /dev/null 2>&1
-wget $pllogourl$file6 > /dev/null 2>&1
-wget $pllogourl$file7 > /dev/null 2>&1
-wget $pllogourl$file8 > /dev/null 2>&1
-wget $pllogourl$file9 > /dev/null 2>&1
-wget $pllogourl$file10 > /dev/null 2>&1
+wget $dlurl$file1 
+wget $dlurl$file2 
+wget $dlurl$file3 
+wget $dlurl$file4 
+wget $dlurl$file5 
+wget $dlurl$file6 
+wget $dlurl$file7 
+wget $dlurl$file8 
+wget $dllurl$file9 
+wget $dllurl$file10 
 
 mv grub.file grub
 cp -r "$savedir"grub  "$grubdir"				#copy file to /etc/default and replace existing file.
