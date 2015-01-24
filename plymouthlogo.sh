@@ -7,7 +7,7 @@ fi
 apt-get install -y plymouth-theme-script #installs script plymouth theme to make changes work.
 dlurl=https://raw.githubusercontent.com/drubuntu/installation/master/files/grub
 grubfilesurl=files/grub/
-$pllogourl=$dlurl$grubfilesurl
+$pllogourl=$dlurl
 savedir=/opt/.drubuntu/drubuntu/
 plymouththemedir=/lib/plymouth/themes/
 grubdir=/etc/default/
