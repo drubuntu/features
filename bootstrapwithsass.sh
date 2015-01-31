@@ -29,4 +29,4 @@ echo "Your Bootstrap 3 Subtheme is now installed and works with Sass instead of 
 echo "You can costumize the info file as well as the folder name andthe package.json"
 echo "Run npm install iside the themes folder if you are done!" 
 echo ""
-echo"More info at https://github.com/drubuntu/wiki"
+echo "More info at https://github.com/drubuntu/wiki"
