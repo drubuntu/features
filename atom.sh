@@ -2,6 +2,7 @@
 bdir=/opt/.drubuntu
 sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot npm
 git clone https://github.com/atom/atom $bidr
+clear
 cd /opt/.drubuntu/atom
 git fetch -p
 git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
