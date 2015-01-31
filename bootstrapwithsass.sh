@@ -8,8 +8,8 @@ copyboilerplate(){
 if [ -d "$d7folder" ];then
 mkdir -p "$allthemesfolder"
 cp -R "$boilderplatesfolder" "$allthemesfolder"
-cd "$oilderplatesfolderdrupal"
-sudo npm install
+cd "$boilderplatesfolderdrupal"
+sudo npm install "$boilderplatesfolderdrupal"
 else
 	echo "Drupal 7 seems not to be installed correctly."
 fi 
