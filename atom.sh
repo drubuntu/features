@@ -3,14 +3,14 @@ bdir=/opt/.drubuntu
 sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot npm
 git clone https://github.com/atom/atom $bidr
 clear
-cd /opt/.drubuntu/atom
+cd /opt/.drubuntu/featurs/atom
 git fetch -p
 git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 if ! [ -d /src/atom  ];then
 sudo mkdir -p /src/atom
 fi
-./opt/.drubuntu/atom/script/build --build-dir /src/atom/
-sudo ./opt/.drubuntu/atom/script/grunt install  --install-dir /opt/atom
+./opt/.drubuntu/features/atom/script/build --build-dir /src/atom/
+sudo ./opt/.drubuntu/features/atom/script/grunt install  --install-dir /opt/atom
 apm install drupal-info-file
 apm install drupal
 apm install language-drupal
