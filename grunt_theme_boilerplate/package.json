@@ -2,9 +2,9 @@
   "name": "bootstrap_grunttheme",
   "version": "1.0.0",
   "author": "Horvan",
-  "homepage": "http://horvan.github.io/drubuntu",
+  "homepage": "http://drubuntu.github.io/drubuntu",
   "engines": {
-    "node": ">= 0.10.25"
+    "node": ">= 0.10.36"
   },
   "devDependencies": {
       "grunt-contrib-compass": "v1.0.1",
