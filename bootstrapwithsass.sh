@@ -2,7 +2,7 @@
 d7folder=/var/www/d7
 bootstrapfolder=/var/www/d7/sites/all/themes/bootstrap/
 allthemesfolder=/var/www/d7/sites/all/themes
-boilderplatesfolder=grunt_theme_boilerplate
+boilderplatesfolder=/opt/.drubuntu/features/grunt_theme_boilerplate
 
 copyboilerplate(){
 if [ -d "$d7folder" ];then
