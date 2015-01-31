@@ -1,6 +1,6 @@
 #!/bin/bash
 bdir=/opt/.drubuntu
-apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot npm
+sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot npm
 git clone https://github.com/atom/atom $bidr
 cd /opt/.drubuntu/atom
 git fetch -p
