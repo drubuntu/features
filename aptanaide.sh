@@ -51,4 +51,5 @@ Keywords=Aptana;IDE;aptana;studio
 EOF
 fi
 echo "Aptana Studio 3 will be avialable at next login time!"
+rm archivesources.sh
 rm -- "$0"
