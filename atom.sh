@@ -15,5 +15,6 @@ apm install drupal-info-file
 apm install drupal
 apm install language-drupal
 apm install  git-plus
+rm -r "$HOME"/atom
 rm -- "$0"
 exit
