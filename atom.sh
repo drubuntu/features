@@ -1,7 +1,7 @@
 #!/bin/bash
 bdir=/opt/.drubuntu
 sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot npm
-git clone https://github.com/atom/atom "$HOME"
+git clone https://github.com/atom/atom.git "$HOME"
 clear
 cd "$HOME"/atom
 git fetch -p
