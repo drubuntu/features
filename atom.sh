@@ -9,8 +9,8 @@ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 if ! [ -d /src/atom  ];then
 sudo mkdir -p /src/atom
 fi
-sudo ./"$HOME"/atom/script/build --build-dir /src/atom/
-sudo ./"$HOME"/atom/script/grunt install  --install-dir /opt/atom
+sudo ."$HOME"/atom/script/build --build-dir /src/atom/
+sudo ."$HOME"/atom/script/grunt install  --install-dir /opt/atom
 apm install drupal-info-file
 apm install drupal
 apm install language-drupal
