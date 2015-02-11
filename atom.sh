@@ -1,21 +1,31 @@
 #!/bin/bash
 bdir=/opt/.drubuntu
+if ! [ -f /etc/apt/sources.list.d/nodesource.list  ];then
 curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot npm
-git clone https://github.com/atom/atom.git "$HOME"/atom
+else
+sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs
+
+fi
+if ! [ -d /opt/atom/  ];then
+sudo git clone https://github.com/atom/atom  "/opt/atom"
+sudo npm config set python /usr/bin/python2 -g
+else
+echo "cloning faild"
+fi &&
 clear
-cd "$HOME"/atom &&
-git fetch -p
-git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
+cd /opt/atom &&
+sudo git fetch -p
+sudo git checkout $(git describe --tags `git rev-list --tags --max-count=1`)&&
+cd /opt/
 if ! [ -d /src/atom  ];then
 sudo mkdir -p /src/atom
 fi
-"$HOME"/atom/script/build --build-dir /src/atom/ | sudo node -
-"$HOME"/atom/script/grunt install  --install-dir /opt/atom | sudo node -
+cd /opt/atom
+#  ./script/bootstrap&&
+sudo ./script/build --build-dir /src/atom
+sudo ./script/grunt install --install-dir /opt/atom
 apm install drupal-info-file
 apm install drupal
 apm install language-drupal
 apm install  git-plus
-rm -r "$HOME"/atom
-rm -- "$0"
 exit
