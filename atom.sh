@@ -11,8 +11,11 @@ function dependencies(){
    apt-get update&& apt-get upgrade -y -qq
 # installes nodejs from nodesource github project
 apt-get install -y -qq curl
+
 if ! [ -f /etc/apt/sources.list.d/nodesource.list  ];then
-curl -sL https://deb.nodesource.com/setup | sudo bash -
+curl -sL https://deb.nodesource.com/setup | sudo bash - &&
+apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs && >>/dev/null 2&>1
+ npm config set python /usr/bin/python2 -g
 else
 # installs ubuntu dependencies
 echo "Installing dependecies ..."
