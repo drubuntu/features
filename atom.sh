@@ -50,7 +50,7 @@ cd /opt/atom
 #  mv /src/atom/Atom/ /usr/share
 #  mv src/atom/icons/* /usr/share/icons
 # cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
-}
+#}
 #fixing permissions to avoid atom issue #5470
 function fix_permissions(){
   chmod -R 777 ~/.atom
