@@ -44,14 +44,14 @@ function  build(){
 #build atom  
 cd /opt/atom
  ./script/build --build-dir /src/atom
- ./script/grunt install --install-dir /usr
+ ./script/grunt install --install-dir /opt/atom
 }
 #mooving files to /usr/share/*
-#function move(){
-#  mv /src/atom/Atom/ /usr/share
-#  mv src/atom/icons/* /usr/share/icons
-# cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
-#}
+function move(){
+  mv /src/atom/Atom/ /usr/share
+  mv src/atom/icons/* /usr/share/icons
+ cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
+}
 #fixing permissions to avoid atom issue #5512
 function fix_permissions(){
   chmod -R 777 ~/.atom
@@ -79,5 +79,5 @@ function run(){
   cleanup
 }
 run
-echo "" Atom is ready now
+echo  "Atom is ready now!"
 exit
