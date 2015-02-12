@@ -1,5 +1,11 @@
 
 #!/bin/bash
+function move(){
+  sudo mv /src/atom/Atom/ /usr/share
+  mv src/atom/icons/* /usr/share/icons
+  sudo  cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
+}
+
 function  build(){
   
 cd /opt/atom
@@ -44,7 +50,8 @@ apm install  git-plus
 }
 function cleanup (){
   sudo rm -r /src/atom
-sudo rm -r /tmp/*
+sudo rm -r /tmp/* /opt/atom
+
 clear
 }
 function run(){
