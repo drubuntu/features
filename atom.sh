@@ -48,7 +48,9 @@ cd /opt/atom
 }
 #mooving files to /usr/share/*
 function move(){
-  mv /src/atom/Atom/ /usr/share
+  cp -r /usr/share/atom/Atom /usr/share/atom/atom
+  rm -r /usr/share /atom/Atom
+  mv /src/atom/atom/ /usr/share
   mv src/atom/icons/* /usr/share/icons
  cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
 }
