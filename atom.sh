@@ -1,46 +1,57 @@
-
 #!/bin/bash
+# check if script is running with root privileges
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
 
 function dependencies(){
-  sudo apt-get update&&sudo apt-get upgrade -y -qq
+   # fetches updates if there are some
+   apt-get update&& apt-get upgrade -y -qq
+# installes nodejs from nodesource github project
+apt-get install -y -qq curl
 if ! [ -f /etc/apt/sources.list.d/nodesource.list  ];then
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 else
+# installs ubuntu dependencies
 echo "Installing dependecies ..."
-sudo apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs >>/dev/null 2&>1
-sudo npm config set python /usr/bin/python2 -g
+ apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs >>/dev/null 2&>1
+ npm config set python /usr/bin/python2 -g
 clear
 fi
 
 }
+#cloning atom
 function clone (){
   if ! [ -d /opt/atom/  ];then
 echo "cloning atom ..."
-sudo git clone https://github.com/atom/atom  "/opt/atom"
+git clone https://github.com/atom/atom  "/opt/atom"
 else
 echo "cloning faild!"
 fi 
 clear
 cd /opt/atom &&
-sudo git fetch -p
-sudo git checkout $(git describe --tags `git rev-list --tags --max-count=1`)&&
+git fetch -p
+ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)&&
 cd /opt/
 if ! [ -d /src/atom  ];then
 sudo mkdir -p /src/atom
 fi
-
 }
 function  build(){
-  
+#build atom  
 cd /opt/atom
-sudo ./script/build --build-dir /src/atom
-sudo ./script/grunt install --install-dir /opt/atom
+ ./script/build --build-dir /src/atom
+ ./script/grunt install --install-dir /usr
 }
-function move(){
-  sudo mv /src/atom/Atom/ /usr/share
-  mv src/atom/icons/* /usr/share/icons
-  sudo  cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
+#mooving files to /usr/share/*
+#function move(){
+#  mv /src/atom/Atom/ /usr/share
+#  mv src/atom/icons/* /usr/share/icons
+# cp -r /opt/atom/bin /usr; sudo cp -r /opt/atom/share/ /usr
 }
+#fixing permissions to avoid atom issue #5470
 function fix_permissions(){
   chmod -R 777 ~/.atom
 }
@@ -52,8 +63,8 @@ apm install  git-plus
 
 }
 function cleanup (){
-  sudo rm -r /src/atom
-sudo rm -r /tmp/* /opt/atom
+ rm -r /src/atom
+rm -r /tmp/* /opt/atom
 
 clear
 }
@@ -67,7 +78,5 @@ function run(){
   cleanup
 }
 run
-echo "Atom ist installed now. Due to some bugs you need to run Atomwith sudo privileges"
-echo ""
-echo "Enter "sudo atom"
+echo "" Atom is ready now
 exit
