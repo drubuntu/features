@@ -7,18 +7,19 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 function dependencies(){
-   # fetches updates if there are some
-   apt-get update&& apt-get upgrade -y -qq
+echo "Installing dependecies ..."
+# fetches updates if there are some
+   apt-get update&& apt-get upgrade -y -qq >>/dev/null 2>&1
 # installes nodejs from nodesource github project
 apt-get install -y -qq curl
 
 if ! [ -f /etc/apt/sources.list.d/nodesource.list  ];then
-curl -sL https://deb.nodesource.com/setup | sudo bash - &&
+curl -sL https://deb.nodesource.com/setup | sudo bash - && >>/dev/null 2&>1
 apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs && >>/dev/null 2&>1
  npm config set python /usr/bin/python2 -g
 else
 # installs ubuntu dependencies
-echo "Installing dependecies ..."
+
  apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs >>/dev/null 2&>1
  npm config set python /usr/bin/python2 -g
 clear
