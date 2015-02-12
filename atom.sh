@@ -9,18 +9,15 @@ fi
 function dependencies(){
 echo "Installing dependecies ..."
 # fetches updates if there are some
-   apt-get update&& apt-get upgrade -y -qq >>/dev/null 2>&1
+   apt-get update&& apt-get upgrade -y -qq ;apt-get install -y -qq curl >>/dev/null 2>&1
 # installes nodejs from nodesource github project
-apt-get install -y -qq curl
 
 if ! [ -f /etc/apt/sources.list.d/nodesource.list  ];then
-curl -sL https://deb.nodesource.com/setup | sudo bash - && >>/dev/null 2&>1
+curl -sL https://deb.nodesource.com/setup | sudo bash -  >>/dev/null 2&>1
 apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs && >>/dev/null 2&>1
  npm config set python /usr/bin/python2 -g
 else
-# installs ubuntu dependencies
-
- apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs >>/dev/null 2&>1
+apt-get install -y -qq git git-core build-essential libgnome-keyring-dev fakeroot nodejs >>/dev/null 2&>1
  npm config set python /usr/bin/python2 -g
 clear
 fi
@@ -30,7 +27,7 @@ fi
 function clone (){
   if ! [ -d /opt/atom/  ];then
 echo "cloning atom ..."
-git clone https://github.com/atom/atom  "/opt/atom"
+sudo git clone https://github.com/atom/atom  "/opt/atom"
 else
 echo "cloning faild!"
 fi 
