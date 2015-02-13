@@ -10,8 +10,7 @@ cd "$bdir"
 }
 wget --progrss-bar "$deb" -O "$bdir"/atom.deb  >>/dev/null 2&>1
 echo -e    "${lightgreen}Atom{NC} ${white}  ${highfin} {NC} ${ lightred} ${atombrandtext} ${NC}  ${white} ${isinstallingnowmssg} ${NC}"
-sudo gdebi "bdir"/atom.deb >>/dev/null 2&>1
-sudo dpkg -i "bdir"/atom.deb
+sudo gdebi -y "bdir"/atom.deb
 rm "bdir"/atom.deb
 fetch_plugins
 rm --"$0"
