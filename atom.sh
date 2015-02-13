@@ -9,7 +9,7 @@ fi
 function dependencies(){
 echo "Installing dependecies ..."
 # fetches updates if there are some
-   apt-get update&& apt-get upgrade -y -qq ;apt-get install -y -qq curl >>/dev/null 2&>1
+   apt-get update&& apt-get upgrade -y -qq ;apt  -y -qq install curl >>/dev/null 2&>1
 # installes nodejs from nodesource github project
 
 if ! [ -f /etc/apt/sources.list.d/nodesource.list  ];then
