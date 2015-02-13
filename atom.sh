@@ -12,6 +12,7 @@ echo  "Downloading Atom ..."
 wget --progrss-bar "$deb" -O "$bdir"/atom.deb
 echo  "Installing Atom ..."
 sudo gdebi -n "$bdir"/atom.deb >> /dev/null 2>&1
+sudo chmod 755 ~/.atom
 rm "bdir"/atom.deb
 echo  "get Drupal Plugins ..."
 fetch_plugins
