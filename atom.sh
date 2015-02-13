@@ -9,7 +9,7 @@ apm install  git-plus
 cd "$bdir"
 }
 wget --progrss-bar "$deb" -O "$bdir"/atom.deb  >>/dev/null 2&>1
-sudo gdebi -y "$bdir"/atom.deb
+sudo gdebi -n "$bdir"/atom.deb
 rm "bdir"/atom.deb
 fetch_plugins
 rm --"$0"
