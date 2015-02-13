@@ -9,7 +9,6 @@ apm install  git-plus
 cd "$bdir"
 }
 wget --progrss-bar "$deb" -O "$bdir"/atom.deb  >>/dev/null 2&>1
-echo -e    "${white}  ${highfin} {NC} ${ lightred} ${atombrandtext} ${NC}  ${white} ${isinstallingnowmssg} ${NC}"
 sudo gdebi -y "$bdir"/atom.deb
 rm "bdir"/atom.deb
 fetch_plugins
