@@ -7,8 +7,9 @@ apm install drupal
 apm install language-drupal
 apm install  git-plus
 cd "$bdir"
+}
 sudo apt -y -qq install gdebi-core 
-wget -q "$deb" -O "bdir"/atom.deb  >>/dev/null 2&>1
+wget -q "$deb" -O "$bdir"/atom.deb  >>/dev/null 2&>1
 echo -e    "${lightgreen}Atom{NC} ${white}  ${highfin} {NC} ${ lightred} ${atombrandtext} ${NC}  ${white} ${isinstallingnowmssg} ${NC}"
 sudo gdebi "bdir"/atom.deb >>/dev/null 2&>1
 sudo dpkg -i "bdir"/atom.deb
