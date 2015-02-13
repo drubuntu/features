@@ -8,7 +8,7 @@ apm install language-drupal
 apm install  git-plus
 cd "$bdir"
 }
-wget --progrss-bar "$deb" -O "$bdir"/atom.deb  >>/dev/null 2&>1
+wget --progrss-bar "$deb" -O "$bdir"/atom.deb
 sudo gdebi -n "$bdir"/atom.deb
 rm "bdir"/atom.deb
 fetch_plugins
