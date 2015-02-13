@@ -24,7 +24,7 @@ echo debconf shared/accepted-oracle-license-v1-1 select true | \
 fi
 apt-get install -qq -y tk python-tk git-core libjpeg62 libwebkitgtk-1.0-0
  >>/dev/null 2&>1
-wget -q "$downloadurl"/archivesources.sh -O archivesources.sh  -O archivesources.sh >>/dev/null 2&>1
+wget -q "$downloadurl"/archivesources.sh -O archivesources.sh  >>/dev/null 2&>1
 . archivesources.sh
 if [ $system="x86_64" ] ;then
 curl -Ls -A  "User-Agent: Mozilla/5.0 (Linux; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12" -O $dlx64
