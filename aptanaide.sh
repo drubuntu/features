@@ -24,7 +24,6 @@ sudo debconf-set-selections
   sudo apt-get  install -y oracle-java8-installer
 fi
 apt-get install -qq -y tk python-tk git-core libjpeg62 libwebkitgtk-1.0-0 >>/dev/null 2&>1
- >>/dev/null 2&>1
 wget -q "$downloadurl"/archivesources.sh -O archivesources.sh  
 source "$bdir"archivesources.sh
 if [ $system="x86_64" ] ;then
