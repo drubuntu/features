@@ -72,7 +72,7 @@ case $1 in
     --apc)
 echo -e " ${white}  ${needpassmssg} ${shortapcmssg} ${toyoursystemmssg} ${NC}"
 
-sudo bash "$DIRURL"/apc.sh
+sudo bash "$DIRURL"apc.sh
 
     ;;
 
@@ -108,7 +108,7 @@ sudo  bash "$DIRURL"proftpd.sh
     ;;
     --xdebug)
 echo -e " ${white}  ${needpassmssg} ${shortxdebugmssg} ${toyoursystemmssg} ${NC}"
-sudo bash xdebug.sh
+sudo bash "$DIRURL"xdebug.sh
     ;;
 --plymouth)
 echo -e " ${white}  ${needpassmssg} ${shortplymouthmssg} ${toyoursystemmssg} ${NC}"
@@ -116,7 +116,7 @@ sudo bash "$DIRURL"plymouthlogo.sh
     ;;
     --webexplangs)
 echo -e " ${white}  ${needpassmssg} ${shortwebexplangsmssg} ${toyoursystemmssg} ${NC}"
-sudo bash webexplangs.sh
+sudo bash "$DIRURL"webexplangs.sh
     ;;
     --varnish)
 echo -e " ${white}  ${needpassmssg} ${shortvarnishmssg} ${toyoursystemmssg} ${NC}"
