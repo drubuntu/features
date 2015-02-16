@@ -1,5 +1,5 @@
 #!/bin/bash
-bdir=/opt/.drubuntu/features
+bdir=/opt/.drubuntu/features/
 if [ `whoami` != root ]; then
     echo "Please run this script as root or using sudo"
    else
@@ -7,7 +7,7 @@ pwd
 echo "You'll be notified if we're ready"
 echo ""
 echo "if Java is not installed you have to accept their terms to be able to use Aptana Studio 3"
-sudo apt-get -y -qq install curl dmidecode unzip >>/dev/null 2&>1
+sudo apt-get install -y -qq install curl dmidecode unzip >>/dev/null 2&>1
 sleep 5
 downloadurl=https://raw.githubusercontent.com/drubuntu/features/master/features/
 system=`sudo uname -m`
@@ -26,7 +26,7 @@ fi
 apt-get install -qq -y tk python-tk git-core libjpeg62 libwebkitgtk-1.0-0 >>/dev/null 2&>1
  >>/dev/null 2&>1
 wget -q "$downloadurl"/archivesources.sh -O archivesources.sh  
-. "$bdir"/archivesources.sh
+source "$bdir"archivesources.sh
 if [ $system="x86_64" ] ;then
 curl -Ls -A  "User-Agent: Mozilla/5.0 (Linux; U; Windows NT 5.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12" -O $dlx64
 unzip "$x64" -d /opt
