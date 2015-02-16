@@ -9,7 +9,7 @@ if [ -d "$d7folder" ];then
 mkdir -p "$allthemesfolder"
 cp -R "$boilderplatesfolder" "$allthemesfolder"
 cd "$boilderplatesfolderdrupal"
-sudo npm install "$boilderplatesfolderdrupal"
+sudo npm install "$boilderplatesfolderdrupal"  >>/dev/null 2>&1
 else
 	echo "Drupal 7 seems not to be installed correctly."
 fi 
