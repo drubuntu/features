@@ -17,4 +17,4 @@ sudo chmod -R 755 /home/$username/.atom
 sudo rm "bdir"/atom.deb
 echo  "get Drupal Plugins ..."
 fetch_plugins
-rm --"$0"
+rm --$0
