@@ -9,4 +9,5 @@ contains all modular  features for drubuntu
 - Browser Suite for Drubuntu (installs the most common browsers all at once
 - Varnish
 - Memcahced
-
+- ProFTPd
+- xdebug for PHP
