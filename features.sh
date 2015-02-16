@@ -92,7 +92,7 @@ sudo bash "$DIRURL"aptanaxdbug.sh
 
 --atom)
 echo -e " ${white}  ${needpassmssg} ${shortatommssg} ${toyoursystemmssg} ${NC}"
-sudo bash "$DIRURL"/atom.sh >>/dev/null 2>&1
+sudo bash "$DIRURL"atom.sh >>/dev/null 2>&1
     ;;
 
 
