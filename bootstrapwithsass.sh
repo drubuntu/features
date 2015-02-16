@@ -9,7 +9,7 @@ if [ -d "$d7folder" ];then
 mkdir -p "$allthemesfolder"
 cp -R "$boilderplatesfolder" "$allthemesfolder"
 cd "$boilderplatesfolderdrupal"
-sudo npm install "$boilderplatesfolderdrupal"  >>/dev/null 2>&1
+sudo npm install "$boilderplatesfolderdrupal"  
 else
 	echo "Drupal 7 seems not to be installed correctly."
 fi 
@@ -25,8 +25,11 @@ chown -Rh "$nmeofuser":www-data "$bootstrapfolder"
 chown -Rh "$nmeofuser":www-data "$boilderplatesfolder"
 chown -Rh "$nmeofuser":www-data "$boilderplatesfolderdrupal"
  fi
+clear
 echo "Your Bootstrap 3 Subtheme is now installed and works with Sass instead of less"
-echo "You can costumize the info file as well as the folder name andthe package.json"
-echo "Run npm install iside the themes folder if you are done!" 
+rcho ""
+echo "You can costumize the info file as well as the folder name and the package.json"
+echo ""
+echo "Run npm install inside the themes folder if you are done!" 
 echo ""
 echo "More info at https://github.com/drubuntu/wiki"
