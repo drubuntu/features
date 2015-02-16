@@ -11,3 +11,4 @@ contains all modular  features for drubuntu
 - Memcahced
 - ProFTPd
 - xdebug for PHP
+- Plymouth Logo reset script
