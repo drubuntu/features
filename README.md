@@ -7,4 +7,6 @@ contains all modular  features for drubuntu
 - Bootstrap 3 with Sass support for Drupal 7
 - Atom - The Text Editor for the 21st Century from GitHub
 - Browser Suite for Drubuntu (installs the most common browsers all at once
-- 
+- Varnish
+- Memcahced
+
