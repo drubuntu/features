@@ -7,7 +7,7 @@ cd "$PWD"
 echo "You'll be notified if we're ready"
 echo ""
 echo "if Java is not installed you have to accept their terms to be able to use Aptana Studio 3"
-sudo apt -y -qq install   curl dmidecode unzip
+sudo apt -y -qq install   curl dmidecode unzip >>/dev/null 2&>1
 sleep 5
 downloadurl=https://raw.githubusercontent.com/drubuntu/features/master/features/
 system=`sudo uname -m`
