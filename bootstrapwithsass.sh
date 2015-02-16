@@ -27,7 +27,7 @@ chown -Rh "$nmeofuser":www-data "$boilderplatesfolderdrupal"
  fi
 clear
 echo "Your Bootstrap 3 Subtheme is now installed and works with Sass instead of less"
-rcho ""
+echo ""
 echo "You can costumize the info file as well as the folder name and the package.json"
 echo ""
 echo "Run npm install inside the themes folder if you are done!" 
