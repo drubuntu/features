@@ -3,7 +3,7 @@ bdir=/opt/.drubuntu/features/
 if [ `whoami` != root ]; then
     echo "Please run this script as root or using sudo"
    else
-pwd
+cd "$pwd"
 echo "You'll be notified if we're ready"
 echo ""
 echo "if Java is not installed you have to accept their terms to be able to use Aptana Studio 3"
