@@ -44,6 +44,7 @@ if  [  -d "$DIRURL" ];then
 rm -r "$DIRURL" 
 fi
 download
+
 function show_help() {							#this is the help text
      
        echo -e " ${white}  ${apcswitch}                ${apcmssg} ${NC}"
