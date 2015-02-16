@@ -83,9 +83,9 @@ echo -e " ${white}  ${needpassmssg} ${shortaptanagitmssg} ${toyoursystemmssg} ${
 sudo bash "$DIRURL"aptanagitsupport.sh
     ;;
 
---aptanaxdebug)
+--aptana-xdebug)
 echo -e " ${white}  ${needpassmssg} ${shortaptanaxdvugmssg} ${toyoursystemmssg} ${NC}"
-sudo bash "$DIRURL"aptanaxdbug.sh
+sudo bash "$DIRURL"aptanaxdebug.sh
     ;;
 
 --atom)
