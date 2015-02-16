@@ -19,7 +19,7 @@ if [ -d "$bootstrapfoler" ];then
 copyboilerplate
 else
 	cd "$d7folder"
-	drush -y dl bootstrap
+	drush  dl bootstrap -y
 	copyboilerplate
 chown -Rh "$nmeofuser":www-data "$bootstrapfolder"
 chown -Rh "$nmeofuser":www-data "$boilderplatesfolder"
