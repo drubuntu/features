@@ -18,8 +18,8 @@ export nameofuser=`logname`
 if [ -d "$bootstrapfoler" ];then
 copyboilerplate
 else
-	cd "$d7folder"
-	drush  dl bootstrap -y
+	cd "$d7folder";
+	drush -y  dl bootstrap; 
 	copyboilerplate
 chown -Rh "$nmeofuser":www-data "$bootstrapfolder"
 chown -Rh "$nmeofuser":www-data "$boilderplatesfolder"
