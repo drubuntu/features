@@ -6,11 +6,11 @@ pwd
 echo "You'll be notified if we're ready"
 echo ""
 echo "if Java is not installed you have to accept their terms to be able to use Aptana Studio 3"
-sudo apt-get -y -qq install curl >>/dev/null 2&>1
+sudo apt-get -y -qq install curl dmidecode unzip >>/dev/null 2&>1
 sleep 5
 downloadurl=https://raw.githubusercontent.com/drubuntu/features/master/features/
 system=`sudo uname -m`
-apt-get install --force-yes -y -qq unzip dmidecode >>/dev/null 2&>1
+apt-get install  -y -qq unzip dmidecode >>/dev/null 2&>1
 if [ ! -f  /etc/apt/sources.list.d/webupd8team-java-trusty.list ] ;then
 
 apt-add-repository -y ppa:webupd8team/java >>/dev/null 2&>1
