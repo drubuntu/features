@@ -44,7 +44,7 @@ if  [  -d "$DIRURL" ];then
 rm -r "$DIRURL" 
 fi
 download
-
+apt -y full-upgrade
 function show_help() {							#this is the help text
      
        echo -e " ${white}  ${apcswitch}                ${apcmssg} ${NC}"
