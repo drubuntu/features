@@ -56,7 +56,7 @@ function show_help() {							#this is the help text
        echo -e " ${white}  ${browserswitch}            ${browsersmssg} ${NC}"
        echo -e " ${white}  ${desktopswitch}            ${desktopsmssg} ${NC}"
        echo -e " ${white}  ${elementaryosswitch}       ${elementaryosmssg} ${NC}"
-       echo -e " ${white}  ${faenzaswitch}            ${faenzadmssg} ${NC}"
+       echo -e " ${white}  ${faenzaswitch}             ${faenzamssg} ${NC}"
        echo -e " ${white}  ${memcachedswitch}          ${memcachedmssg} ${NC}"
        echo -e " ${white}  ${plymouthswitch}           ${plymouthmssg} ${NC}"
        echo -e " ${white}  ${proftpdswitch}            ${proftpdmssg} ${NC}"  .
