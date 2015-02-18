@@ -34,6 +34,7 @@ echo "Firefox Develope Edition is installed now"
 echo ""
 # add and install opera
 echo "Opera Beta, will be installed now."
+echo opera-beta opera-beta/add-deb-source select true | sudo debconf-set-selections
 debconf-set-selections <<< ' opera-beta/add-deb-source true'
 wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
 wget -q -O opera.deb http://operasoftware.pc.cdn.bitgravity.com/pub/opera-beta/26.0.1656.20/linux/opera-beta_26.0.1656.20_amd64.deb;
