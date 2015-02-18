@@ -11,6 +11,7 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; >/dev/null 2>&1
 sudo dpkg -i google-chrome-stable_current_amd64.deb;   >/dev/null 2>&1
 sudo apt-get install -qq -f ;
+sudo rm google-chrome-stable_current_amd64.deb
 clear
 echo "Google Chrome is installed, now"
 echo ""
