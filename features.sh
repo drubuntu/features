@@ -55,6 +55,8 @@ function show_help() {							#this is the help text
        echo -e " ${white}  ${bootstrapwithsassswitch}  ${bootstrapwsassmssg} ${NC}"
        echo -e " ${white}  ${browserswitch}            ${browsersmssg} ${NC}"
        echo -e " ${white}  ${desktopswitch}            ${desktopsmssg} ${NC}"
+       echo -e " ${white}  ${elementaryosswitch}       ${elementaryosmssg} ${NC}"
+       echo -e " ${white}  ${faenzaswitch}            ${faenzadmssg} ${NC}"
        echo -e " ${white}  ${memcachedswitch}          ${memcachedmssg} ${NC}"
        echo -e " ${white}  ${plymouthswitch}           ${plymouthmssg} ${NC}"
        echo -e " ${white}  ${proftpdswitch}            ${proftpdmssg} ${NC}"  .
@@ -132,6 +134,14 @@ sudo bash "$DIRURL"bootstrapwithsass.sh
 --desktops)
 echo -e " ${white}  ${needpassmssg} ${shortdesktopmsg} ${toyoursystemmssg} ${NC}"
 sudo bash "$DIRURL"bootstrapwithsass.sh
+;;
+--faenca)
+echo -e " ${white}  ${needpassmssg} ${shortfaenzamsg} ${toyoursystemmssg} ${NC}"
+sudo bash "$DIRURL"faenza.sh
+;;
+--elementaryos)
+echo -e " ${white}  ${needpassmssg} ${shortelementarymssg} ${toyoursystemmssg} ${NC}"
+sudo bash "$DIRURL"elementaryfirstdo.sh
 ;;
 *)
     echo -e " ${white}  ${runhlpmssg} ${NC}"
