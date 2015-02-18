@@ -219,7 +219,7 @@ ShellsFile="/etc/shells"
  fi
 
 usradd(){
-adduser drupal7 --home /var/www/d7 --ingroup www-data --shell /usr/sbin/nologin; passwd drupal7; echo "drupal7" >>/etc/vsftpd.userlist 
+adduser drupal7 --uid 999 --home /var/www/d7 --ingroup www-data --shell /usr/sbin/nologin; passwd drupal7; echo "drupal7" >>/etc/vsftpd.userlist 
 }
 
 #adding user
