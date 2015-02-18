@@ -48,7 +48,7 @@ echo "Opra is installed now"
 echo ""
 #safari and ie here it goes 
 echo "Safari, will be installed now"
-sudo apt-get install -y -qq wine1.4 >/dev/null 2>&1
+sudo apt -y install   wine1.4 >/dev/null 2>&1
 wget http://appldnld.apple.com/Safari5/041-5487.20120509.INU8B/SafariSetup.exe >/dev/null 2>&1
 wine SafariSetup.exe /qn >/dev/null 2>&1
 rm SafariSetup.exe
