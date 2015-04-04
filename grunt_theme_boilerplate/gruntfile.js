@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             src: {
-                files: [‘**/*.scss', '**/*.php'],
+                files: ['**/*.scss', '**/*.php'],
                 tasks: ['compass:dev']
             },
            options: {
