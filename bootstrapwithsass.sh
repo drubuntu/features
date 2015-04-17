@@ -2,17 +2,25 @@
 d7folder=/var/www/d7
 bootstrapfolder=/var/www/d7/sites/all/themes/bootstrap/
 allthemesfolder=/var/www/d7/sites/all/themes/
-boilderplatesfolder=/opt/.drubuntu/features/grunt_theme_boilerplate
-boilderplatesfolderdrupal="$allthemesfolder"grunt_theme_boilerplate
+boilderplatesfolder=/opt/.drubuntu/features/grunt_theme_boilerplate/
+boilderplatesfolderdrupal="$allthemesfolder"grunt_theme_boilerplate/
+bootstrapsassdir="$boilderplatesfolderdrupal"bootstrap-sass
+downloadsass(){
+	if [ ! -d "$bootstrapsassdir" ] ;then
+sudo git clone https://github.com/twbs/bootstrap-sass.git "$boilderplatesfolderdrupal"
+else
+sudo rm -r "$bootstrapsassdir"
+sudo git clone https://github.com/twbs/bootstrap-sass.git "$boilderplatesfolderdrupal"
+fi
+}
 copyboilerplate(){
 if [ -d "$d7folder" ];then
 mkdir -p "$allthemesfolder"
 cp -R "$boilderplatesfolder" "$allthemesfolder"
 cd "$boilderplatesfolderdrupal"
 sudo npm install "$boilderplatesfolderdrupal"  
-else
-	echo "Drupal 7 seems not to be installed correctly."
-fi 
+
+	echo "Drupal 7 seems not to be installed correctly."fi 
 }
 export nameofuser=`logname` 
 if [ -d "$bootstrapfoler" ];then
