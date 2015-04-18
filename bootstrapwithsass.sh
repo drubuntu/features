@@ -20,9 +20,12 @@ cp -R "$boilderplatesfolder" "$allthemesfolder"
 cd "$boilderplatesfolderdrupal"
 sudo npm install "$boilderplatesfolderdrupal"  
 
-	echo "Drupal 7 seems not to be installed correctly."fi 
+echo "Drupal 7 seems not to be installed correctly."
+	fi 
 }
+
 export nameofuser=`logname` 
+
 if [ -d "$bootstrapfoler" ];then
 copyboilerplate
 else
