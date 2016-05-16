@@ -1,5 +1,5 @@
 #!/bin/bash 
-deb=https://github.com/atom/atom/releases/download/v0.179.0/atom-amd64.deb
+deb=https://github.com/atom/atom/releases/download/v1.8.0-beta3/atom-amd64.deb
 bdir=/opt/.drubuntu
 export username=`logname`
 function  fetch_plugins (){
