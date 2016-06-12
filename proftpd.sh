@@ -7,7 +7,7 @@ if [ `whoami` != root ]; then
 fi
 
 #installation and anonymous user configuration
-echo "proftpd-basic shared/proftpd/inetd_or_standalone select standalone" |sudo ^ debconf-set-selections
+echo "proftpd-basic shared/proftpd/inetd_or_standalone select standalone" |sudo  debconf-set-selections
 apt-get install -y -qq proftpd-basic >/dev/null 2>&1 	#installs the server
 mkdir /srv/ftp				#creates the default directory for the anonymous user
 usermod -d /srv/ftp ftp 	# points the user to the directory given above
